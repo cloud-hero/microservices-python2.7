@@ -7,6 +7,8 @@ RUN apt-get update && apt-get install -y unzip
 RUN mkdir /app
 WORKDIR /app
 
+EXPOSE 80
+
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod u+x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
